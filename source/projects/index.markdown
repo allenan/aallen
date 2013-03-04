@@ -15,14 +15,20 @@ A game-changing communication platform built to scale with Ruby on Rails. Utiliz
 
 ### [The Remnant Society](http://theremnantsociety.com)
 
+[{% img https://dl.dropbox.com/u/88570128/projects/theremnantsociety.png 400 "The Remnant Society" %}](http://theremnantsociety.com)
+
 Coming in 2013, The Remnant Society designs clothing products that reflect a commitment both to quality and to the natural world. I will be building the site on Wordpress with WooComerce.
 
 
 ### [Goldich-Singer Wedding](http://goldichsingerwedding.com)
 
+[{% img https://dl.dropbox.com/u/88570128/projects/goldichsingerwedding.png 400 "Goldich-Singer Wedding" %}](http://goldichsingerwedding.com)
+
 Homepage for my girlfriend's sister's wedding. When run in a modern browser, the site includes a full-page background video timelapse of Chicago.
 
 ### [When's The Next...?](http://whensthenext.com)
+
+[{% img https://dl.dropbox.com/u/88570128/projects/whensthenext.png 400 "When's the Next...?" %}](http://whensthenext.com)
 
 A small side project, just a coming soon page that I designed for now.
 
