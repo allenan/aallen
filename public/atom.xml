@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Andrew Allen]]></title>
+  <link href="http://aallen.net/atom.xml" rel="self"/>
+  <link href="http://aallen.net/"/>
+  <updated>2013-03-04T13:07:58-06:00</updated>
+  <id>http://aallen.net/</id>
+  <author>
+    <name><![CDATA[Andrew Allen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://aallen.net/blog/2013/03/03/hello-world/"/>
+    <updated>2013-03-03T23:40:00-06:00</updated>
+    <id>http://aallen.net/blog/2013/03/03/hello-world</id>
+    <content type="html"><![CDATA[<p>I have been meaning to set up a homepage for myself for some time now. I&#8217;m connected to the internet for most of my waking day and I make my living building things for the internet. It makes sense that I should have my own personal corner of it.</p>
+
+<p>I have even started building a site for myself a few times in the past, but the main sticking point was the lack of the right platform. I&#8217;ve made Wordpress and Drupal sites for clients before, but a full-blown CMS seemed like to much overhead for what I really wanted, which was a mostly static site with a few areas that would be easy to update. Static HTML is refreshing to write; you don&#8217;t have to play by the rules of a CMS with tens of thousands of lines of code at its core, but you also don&#8217;t get any of the niceties that come with a mature platform.</p>
+
+<p>This is where Octopress came in. I saw that it was built on Jekyll, a Ruby-based static site generator that I had used in the past and enjoyed. But Octopress is geared toward developers looking to set up a simple site and it has exactly that community behind it, full of github repos of themes and plugins to do exactly the sorts of things I was looking to do.</p>
+
+<p>In the interest of getting something live before I get zoned in on another project, I&#8217;ll leave the default theme in place for now while I work on my own custom one.</p>
+]]></content>
+  </entry>
+  
+</feed>
