@@ -6,12 +6,12 @@ comments: true
 categories: [jQuery]
 ---
 
-The second beta of jQuery's milestone 2.0 release, which addressed feedback from their first round of beta testing, was announced on March 1st, so we can anticipate a stable production-ready release to ship any day now. jQuery's popularity has risen consistently since its initial release in 2006 and can currently be found on 62.6% of websites according to [builtwith.com](http://trends.builtwith.com/javascript/jQuery). So what can we expect from this new release of the internet's most-used javascript library?
+The second beta of jQuery's milestone 2.0 release, which addressed feedback from their first round of beta testing, [was announced](http://blog.jquery.com/2013/03/01/jquery-2-0-beta-2-released/) on March 1st, so we can anticipate a stable production-ready release to ship any day now. jQuery's popularity has risen consistently since its initial release in 2006 and can currently be found on 62.6% of websites according to [builtwith.com](http://trends.builtwith.com/javascript/jQuery). So what can we expect from this new release of the internet's most-used javascript library?
 
 <!-- more -->
 
 ## No love for IE
-As was announced several months ago, jQuery 2.0 will be making the controversial decision to drop support for versions of Microsoft Internet Explorer prior to version 9. Some developers are calling this a premature decision, while others bemoan relying on User Agent sniffing in the form of conditional comments for handling degradation to earlier versions. Others still laud this as an important step in the right direction. Their blog reassures those developers who are tasked with the unfortunate onus of supporting earlier versions of IE that new releases to jQuery 1.9 will still support IE 6, 7 and 8. They offer the following code snippet which we should expect to soon become ubiquitous, for better or worse.
+As was announced [several months ago](http://blog.jquery.com/2012/06/28/jquery-core-version-1-9-and-beyond/), jQuery 2.0 will be making the controversial decision to drop support for versions of Microsoft Internet Explorer prior to version 9. Some developers are calling this a premature decision, while others bemoan relying on User Agent sniffing in the form of conditional comments for handling degradation to earlier versions. [Others still](https://twitter.com/paul_irish/status/218395508018921472) laud this as an important step in the right direction. jQuery's announcement reassures those developers who are tasked with the unfortunate onus of supporting earlier versions of IE that jQuery 1.9 will still support IE 6, 7 and 8. They offer the following code snippet which we should expect to soon become ubiquitous, for better or worse.
 
 ``` html jQuery 2.0 fallback for IE http://blog.jquery.com/2013/03/01/jquery-2-0-beta-2-released/
 <!--[if lt IE 9]>

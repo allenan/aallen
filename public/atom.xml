@@ -4,7 +4,7 @@
   <title><![CDATA[Andrew Allen]]></title>
   <link href="http://aallen.net/atom.xml" rel="self"/>
   <link href="http://aallen.net/"/>
-  <updated>2013-03-07T12:26:04-06:00</updated>
+  <updated>2013-03-07T12:38:20-06:00</updated>
   <id>http://aallen.net/</id>
   <author>
     <name><![CDATA[Andrew Allen]]></name>
@@ -18,14 +18,14 @@
     <link href="http://aallen.net/blog/2013/03/07/jquery-2-dot-0-whats-coming/"/>
     <updated>2013-03-07T12:12:00-06:00</updated>
     <id>http://aallen.net/blog/2013/03/07/jquery-2-dot-0-whats-coming</id>
-    <content type="html"><![CDATA[<p>The second beta of jQuery&#8217;s milestone 2.0 release, which addressed feedback from their first round of beta testing, was announced on March 1st, so we can anticipate a stable production-ready release to ship any day now. jQuery&#8217;s popularity has risen consistently since its initial release in 2006 and can currently be found on 62.6% of websites according to <a href="http://trends.builtwith.com/javascript/jQuery">builtwith.com</a>. So what can we expect from this new release of the internet&#8217;s most-used javascript library?</p>
+    <content type="html"><![CDATA[<p>The second beta of jQuery&#8217;s milestone 2.0 release, which addressed feedback from their first round of beta testing, <a href="http://blog.jquery.com/2013/03/01/jquery-2-0-beta-2-released/">was announced</a> on March 1st, so we can anticipate a stable production-ready release to ship any day now. jQuery&#8217;s popularity has risen consistently since its initial release in 2006 and can currently be found on 62.6% of websites according to <a href="http://trends.builtwith.com/javascript/jQuery">builtwith.com</a>. So what can we expect from this new release of the internet&#8217;s most-used javascript library?</p>
 
 <!-- more -->
 
 
 <h2>No love for IE</h2>
 
-<p>As was announced several months ago, jQuery 2.0 will be making the controversial decision to drop support for versions of Microsoft Internet Explorer prior to version 9. Some developers are calling this a premature decision, while others bemoan relying on User Agent sniffing in the form of conditional comments for handling degradation to earlier versions. Others still laud this as an important step in the right direction. Their blog reassures those developers who are tasked with the unfortunate onus of supporting earlier versions of IE that new releases to jQuery 1.9 will still support IE 6, 7 and 8. They offer the following code snippet which we should expect to soon become ubiquitous, for better or worse.</p>
+<p>As was announced <a href="http://blog.jquery.com/2012/06/28/jquery-core-version-1-9-and-beyond/">several months ago</a>, jQuery 2.0 will be making the controversial decision to drop support for versions of Microsoft Internet Explorer prior to version 9. Some developers are calling this a premature decision, while others bemoan relying on User Agent sniffing in the form of conditional comments for handling degradation to earlier versions. <a href="https://twitter.com/paul_irish/status/218395508018921472">Others still</a> laud this as an important step in the right direction. jQuery&#8217;s announcement reassures those developers who are tasked with the unfortunate onus of supporting earlier versions of IE that jQuery 1.9 will still support IE 6, 7 and 8. They offer the following code snippet which we should expect to soon become ubiquitous, for better or worse.</p>
 
 <figure class='code'><figcaption><span>jQuery 2.0 fallback for IE</span><a href='http://blog.jquery.com/2013/03/01/jquery-2-0-beta-2-released/'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
