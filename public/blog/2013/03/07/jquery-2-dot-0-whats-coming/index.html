@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>jQuery 2.0: What's Coming? - Andrew Allen</title>
+  <meta name="author" content="Andrew Allen">
+
+  
+  <meta name="description" content="The second beta of jQuery&#8217;s milestone 2.0 release, which addressed feedback from their first round of beta testing, was announced on March 1st &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://aallen.net/blog/2013/03/07/jquery-2-dot-0-whats-coming/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Andrew Allen" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38933481-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Andrew Allen</a></h1>
+  
+    <h2>Web Application Developer, Entrepreneur, Technologist.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:aallen.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/about">About</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/contact">Contact</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">jQuery 2.0: What's Coming?</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-07T12:12:00-06:00" pubdate data-updated="true">Mar 7<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The second beta of jQuery&#8217;s milestone 2.0 release, which addressed feedback from their first round of beta testing, was announced on March 1st, so we can anticipate a stable production-ready release to ship any day now. jQuery&#8217;s popularity has risen consistently since its initial release in 2006 and can currently be found on 62.6% of websites according to <a href="http://trends.builtwith.com/javascript/jQuery">builtwith.com</a>. So what can we expect from this new release of the internet&#8217;s most-used javascript library?</p>
+
+<!-- more -->
+
+
+<h2>No love for IE</h2>
+
+<p>As was announced several months ago, jQuery 2.0 will be making the controversial decision to drop support for versions of Microsoft Internet Explorer prior to version 9. Some developers are calling this a premature decision, while others bemoan relying on User Agent sniffing in the form of conditional comments for handling degradation to earlier versions. Others still laud this as an important step in the right direction. Their blog reassures those developers who are tasked with the unfortunate onus of supporting earlier versions of IE that new releases to jQuery 1.9 will still support IE 6, 7 and 8. They offer the following code snippet which we should expect to soon become ubiquitous, for better or worse.</p>
+
+<figure class='code'><figcaption><span>jQuery 2.0 fallback for IE</span><a href='http://blog.jquery.com/2013/03/01/jquery-2-0-beta-2-released/'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!--[if lt IE 9]&gt;</span>
+</span><span class='line'><span class="c">    &lt;script src=&quot;jquery-1.9.1.js&quot;&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="c">&lt;![endif]--&gt;</span>
+</span><span class='line'><span class="c">&lt;!--[if gte IE 9]&gt;&lt;!--&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;jquery-2.0.0b2.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="c">&lt;!--&lt;![endif]--&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>&#8220;A Completed Refreshed Project&#8221;</h2>
+
+<p>IE controversy aside, what changes are coming and why should we upgrade?</p>
+
+<p>According the the jQuery team in 2011:</p>
+
+<blockquote><p>Our goal is to have a completely refreshed project with the 2.0 release. We will have a much simpler API, better stability, full documentation and a full test suite for every plugin.</p></blockquote>
+
+
+<p>So what has been done in the past two years to make good on those promises?</p>
+
+<h4>A Much Simpler API</h4>
+
+<p>With the new API comes the death knoll for many of the &#8220;deprecated and dubious features&#8221; that had crept into previous versions of jQuery. This new release sports a simpler and more streamlined API resulting in an overall size reduction of more than 10%. The new 1.9 release will share the same API as the 2.0 release so exact details regarding these changes can be found in the <a href="http://jquery.com/upgrade-guide/1.9/">jQuery 1.9 upgrade guide</a>. There is also a new, minimal selector engine that has been implemented by Richard Gibson. Although it is much cleaner and faster and can be used as a replacement for the Sizzle selector engine, there are major differences in the selectors and semantics that developers will need to watch out for.</p>
+
+<h4>Modular by Design</h4>
+
+<p>One of the most groundbreaking aspects of the 2.0 release will be the ability to roll your own jQuery without worrying about dependency. Projects like require.js that promote Asynchronous Module Definition (AMD) have gained quite a lot of traction over the past few years and for good reason. Loading your resources via AMD means only having to load what is needed by a given context. In this same vein, jQuery 2.0 now allows for custom builds through the use of a grunt build script. Each aspect of the jQuery library has been designed to be modular and handle decencies meaning that you can now build a custom version of jQuery for each project, requiring only the functions of the library that are needed. This will result in huge size reductions and performance increases.</p>
+
+<h4>A Central Plugin Registry</h4>
+
+<p>The jQuery team recently announced their initiative to create a <a href="http://plugins.jquery.com/">central plugin registry</a> which will be a welcome relief for anyone that&#8217;s had to track down the most recent version of a plugin across multiple home pages and GitHub repos. Speaking of GitHub, the plugin registry uses GitHub&#8217;s post-receive webhook to publish a plugin. Nice to see they aren&#8217;t trying to reinvent the wheel as far as central repositories go, but are rather building on top of the web&#8217;s de facto place to store code.</p>
+
+<h2>When to upgrade?</h2>
+
+<p>As with any big new release, it is probably prudent to resist the temptation of early-adoption, especially on high-profile sites. Despite thorough beta testing, there will certainly be some bugs that arise, and the conditional IE fallback may cause issues. But the jQuery team is not expecting the average site owner to upgrade immediately; their most recent blog post urges that 2.0 is currently best utilized for Chrome plugins, Firefox &amp; Chrome OS apps, phonegap/cordova apps and other applications with contained browser environments. Despite these warnings, I can predict that many hasty site owners will be dropping in the 2.0 conditional on day one and we&#8217;ll just have to sit back and see what happens…</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Andrew Allen</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-07T12:12:00-06:00" pubdate data-updated="true">Mar 7<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/jquery/'>jQuery</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://aallen.net/blog/2013/03/07/jquery-2-dot-0-whats-coming/" data-via="_andrew_allen_" data-counturl="http://aallen.net/blog/2013/03/07/jquery-2-dot-0-whats-coming/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/03/hello-world/" title="Previous Post: Hello World">&laquo; Hello World</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/07/jquery-2-dot-0-whats-coming/">jQuery 2.0: What's Coming?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/03/hello-world/">Hello World</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/andrewallen2012">@andrewallen2012</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'andrewallen2012',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("_andrew_allen_", 3, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/_andrew_allen_" class="twitter-follow-button" data-show-count="false">Follow @_andrew_allen_</a>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/andrewallen?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/andrewallen">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/101266485560765159908?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="http://www.linkedin.com/in/andrewnallen">
+      <img src="http://radiomagonline.com/media/art/linkedin.png" width="32" height="32">
+      LinkedIn
+    </a>
+  </h1>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Andrew Allen -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'andrew-allen';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://aallen.net/blog/2013/03/07/jquery-2-dot-0-whats-coming/';
+        var disqus_url = 'http://aallen.net/blog/2013/03/07/jquery-2-dot-0-whats-coming/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
