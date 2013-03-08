@@ -1,9 +1,8 @@
 ---
 layout: page
 title: "contact"
-date: 2013-03-03 22:32
 comments: false
-sharing: true
+sharing: false
 footer: true
 ---
 

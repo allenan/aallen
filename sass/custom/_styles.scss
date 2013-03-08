@@ -1,2 +1,83 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+html {
+  // background: $page-bg image-url('new_theme/cross_scratches.png') top left;
+  background: $page-bg image-url('noise.png') top left;
+  background-color: #fafafa;
+}
+
+article {
+  header {
+    h1 {
+      a { text-decoration: none;
+        &:hover { text-decoration: none; } 
+      }
+    }
+  }
+}
+
+.diagonal-dash{
+	background: image-url('new_theme/bg-diag.png');
+	height: 10px;
+	border: 0;
+	margin:0;
+}
+
+#main{
+	border-bottom: 0;
+}
+
+body > footer{
+	background: none;
+	text-shadow: none;
+	text-align: center;
+	color: #bbb;
+	border: 0;
+}
+
+body > div > div {
+	background: #fafafa url('/images/noise.png?1362370664') top left;
+}
+.found-on{
+	min-height: 50px;
+}
+.github-circle, .linkedin-circle, .googleplus-circle, .twitter-circle{
+	float: left;
+	border: 0 !important;
+	width: 47px;
+	height: 33px;
+	margin-right: 18px !important;
+	box-shadow: none !important;
+	a{
+		width: 47px;
+		height: 33px;
+		display: block !important;
+		text-decoration: none !important;
+	}
+}
+.github-circle{
+	background: image-url('new_theme/social/rss_grey.png');
+	&:hover{
+		background: image-url('new_theme/social/rss_color.png');
+	}
+}
+.linkedin-circle{
+	background: image-url('new_theme/social/linkedin_grey.png');
+	&:hover{
+		background: image-url('new_theme/social/linkedin_color.png');
+	}
+}
+
+.googleplus-circle{
+	background: image-url('new_theme/social/gplus_grey.png');
+	&:hover{
+		background: image-url('new_theme/social/gplus_color.png');
+	}
+}
+
+.twitter-circle{
+	background: image-url('new_theme/social/twitter_grey.png');
+	&:hover{
+		background: image-url('new_theme/social/twitter_color.png');
+	}
+}
